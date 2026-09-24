@@ -1,6 +1,5 @@
 REFERENCES
 
-
 FreeFrontend. (2026, July 23). 150+ CSS cards: Free examples & code snippets. https://freefrontend.com/css-cards/
 
 Pexels. (n.d.). A person holding a stack of books [Photograph]. https://www.pexels.com/photo/a-person-holding-a-stack-of-books-7054519/
@@ -13,9 +12,11 @@ Pexels. (n.d.). Close-up of three hands interacting [Photograph]. https://www.pe
 
 Pexels. (n.d.). Diverse audience engaged in indoor workshop [Photograph]. https://www.pexels.com/photo/diverse-audience-engaged-in-indoor-workshop-33714912/
 
-Pexels. (n.d.). Group of diverse adults in indoor setting [Photograph]. https://www.pexels.com/photo/group-of-diverse-adults-in-indoor-setting-32478092/
-
 Pexels. (n.d.). Hands holding green plants [Photograph]. https://www.pexels.com/photo/hands-holding-green-plants-5029853/
+
+Pexels. (n.d.). Health awareness event in Piura, Peru [Photograph]. https://www.pexels.com/photo/health-awareness-event-in-piura-peru-37191914/
+
+Pexels. (n.d.). One-storey office building with white pillars [Photograph]. https://www.pexels.com/photo/one-storey-office-building-with-white-pillars-17545029/
 
 Pexels. (n.d.). People on sandy beach [Photograph]. https://www.pexels.com/photo/people-on-sandy-beach-12079506/
 
