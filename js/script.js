@@ -11,7 +11,7 @@ function initContactFormValidation() {
     const form = document.getElementById('contactForm');
     if (!form) return; 
 
-    /* Variables for contact form inputs + send button and modal box with the confirmation messgage*/
+    //Variables for contact form inputs + send button and modal box with the confirmation messgage
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
     const subjectInput = document.getElementById('subject');
