@@ -1,11 +1,12 @@
 /* JAVASCRIPT FEATURE #1: CONTACT FORM VALIDATION*/
 
+/*Event Listener for Contact Form Validation and Mobile Menu Nav Toggle*/
 document.addEventListener('DOMContentLoaded', function () {
     initContactFormValidation();
     initMobileNavToggle();
 });
 
-
+/* Main function that validates the input for the contact form */
 function initContactFormValidation() {
     const form = document.getElementById('contactForm');
     if (!form) return; 
