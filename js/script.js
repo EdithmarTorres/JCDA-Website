@@ -1,16 +1,17 @@
-/* JAVASCRIPT FEATURE #1: CONTACT FORM VALIDATION*/
+//JAVASCRIPT FEATURE #1: CONTACT FORM VALIDATION
 
-/*Event Listener for Contact Form Validation and Mobile Menu Nav Toggle*/
+// Event Listener for Contact Form Validation and Mobile Menu Nav Toggle
 document.addEventListener('DOMContentLoaded', function () {
     initContactFormValidation();
     initMobileNavToggle();
 });
 
-/* Main function that validates the input for the contact form */
+//Main function that validates the input for the contact form 
 function initContactFormValidation() {
     const form = document.getElementById('contactForm');
     if (!form) return; 
 
+    /* Variables for contact form inputs + send button and modal box with the confirmation messgage*/
     const nameInput = document.getElementById('name');
     const emailInput = document.getElementById('email');
     const subjectInput = document.getElementById('subject');
@@ -22,15 +23,20 @@ function initContactFormValidation() {
         e.preventDefault();
         clearErrors();
 
+        // isValid Boolean is initially true, then the function will run checks (if-statements below)
+        // that can trigger it to become false, and display corresponding error messages
         let isValid = true;
 
-        // Full Name REQUIRED
+        // If user enters nothing for the name, isValid boolean is set to false
+        // and they get an error message
         if (nameInput.value.trim() === '') {
             showError('name', 'Please enter your full name.');
             isValid = false;
         }
 
-        // Email - REQUIRED + LOOK REAL
+        // Checks to see the user enters input that isnt just whitespace
+        // The elseif statement checks that the email is valid and if not a valid email
+        // displays appropriate error
         if (emailInput.value.trim() === '') {
             showError('email', 'Please enter your email address.');
             isValid = false;
@@ -39,26 +45,27 @@ function initContactFormValidation() {
             isValid = false;
         }
 
-        // Subject - REQUIRED
+        // Ensures the subject input isnt empty, if so, displays error message
         if (subjectInput.value.trim() === '') {
             showError('subject', 'Please enter a subject.');
             isValid = false;
         }
 
-        // Message - REQUIRED
+        // Ensures the message input isnt empty, if so, displays error message
         if (messageInput.value.trim() === '') {
             showError('message', 'Please enter a message.');
             isValid = false;
         }
 
-        // IF EVERY FIELD IS VALID, THE MODAL BOX COMES UP WITH SUCCESS MESSAGE
+        // If every field passes the checks above, THEN and only then
+        // the modal box comes up saying "Message Sent Successfully" refer to contact.html
         if (isValid) {
             form.reset();
             modalCheckbox.checked = true;
         }
     });
 
-    // DISPLAYS AN ERROR MESSAGE UNDER A SPECIFIC FIELD AND HIGHLIGHTS IT
+    // Function to display error messages under the contact form specific fields, and highlight it in red
     function showError(fieldId, message) {
         const errorSpan = document.getElementById(fieldId + 'Error');
         const inputEl = document.getElementById(fieldId);
@@ -66,7 +73,8 @@ function initContactFormValidation() {
         if (inputEl) inputEl.classList.add('input-error');
     }
 
-    // CLEARS ALL ERROR MESSAGES AND HIGHLIGHT STYLING
+    // This function clears all the error messages and corresponding styling
+    // so the original look of the form is restored.
     function clearErrors() {
         const errorSpans = form.querySelectorAll('.error-message');
         errorSpans.forEach(function (span) { span.textContent = ''; });
@@ -75,7 +83,7 @@ function initContactFormValidation() {
         inputs.forEach(function (input) { input.classList.remove('input-error'); });
     }
 
-    // BASIC EMAIL PATTERN CHECK
+    // Basic function for email pattern check
     function isValidEmail(email) {
         const pattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return pattern.test(email);
@@ -84,17 +92,8 @@ function initContactFormValidation() {
 
 /* JAVASCRIPT FEATURE #2: MOBILE NAVIGATION TOGGLE*/
 
-function initMobileNavToggle() {
-    const hamburger = document.getElementById('hamburger');
-    const menu = document.querySelector('.menu');
-
-    if (!hamburger || !menu) return; // safety check, skips pages missing either element
-
-    hamburger.addEventListener('click', function () {
-        menu.classList.toggle('open');
-    });
-}
-
+// Function to create a hamburger menu ONLY FOR MOBILE that shows/hides
+// the different menu items when the icon is clicked
 function initMobileNavToggle() {
     const hamburger = document.getElementById('hamburger');
     const menu = document.querySelector('.menu');
